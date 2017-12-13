@@ -4,6 +4,7 @@ typedef void OnFabMiniMenuItemPressed();
 
 class FabMiniMenuItem {
   const FabMiniMenuItem(
+    this.heroTag,
       {this.elevation,
       this.text,
       this.icon,
@@ -13,6 +14,7 @@ class FabMiniMenuItem {
       this.tooltip,
       this.onPressed});
 
+  final Object heroTag;
   final double elevation;
   final String text;
   final Icon icon;
@@ -25,6 +27,7 @@ class FabMiniMenuItem {
 
 class FabMenuMiniItemWidget extends StatelessWidget {
   const FabMenuMiniItemWidget(
+    this.heroTag,
       {Key key,
       this.elevation,
       this.text,
@@ -37,6 +40,7 @@ class FabMenuMiniItemWidget extends StatelessWidget {
       this.controller,
       this.onPressed})
       : super(key: key);
+  final Object heroTag;
   final double elevation;
   final String text;
   final Icon icon;
@@ -85,7 +89,8 @@ class FabMenuMiniItemWidget extends StatelessWidget {
                   backgroundColor: fabColor,
                   tooltip: 'Increment',
                   child: icon,
-                  onPressed: onPressed),
+                  onPressed: onPressed,
+                  heroTag: heroTag),
             )
           ],
         ));

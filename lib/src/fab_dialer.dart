@@ -41,6 +41,7 @@ class FabDialerState extends State<FabDialer> with TickerProviderStateMixin {
     List<FabMenuMiniItemWidget> _fab_menu_items = new List();
     for (int i = 0; i < _fabMiniMenuItemList.length; i++) {
       _fab_menu_items.add(new FabMenuMiniItemWidget(
+        _fabMiniMenuItemList[i].heroTag,
         tooltip: _fabMiniMenuItemList[i].tooltip,
         text: _fabMiniMenuItemList[i].text,
         elevation: _fabMiniMenuItemList[i].elevation,
